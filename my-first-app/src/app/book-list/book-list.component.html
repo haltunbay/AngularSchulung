@@ -1,0 +1,10 @@
+<h3>Book List</h3>
+<button (click)="toggleFormat()">Change Format</button>
+<div class="row" *ngFor="let book of books">
+  <div *ngIf="outputFormat==0">
+    <a [href]="book.publisher.url">{{book.title}}</a>
+  </div>
+  <div *ngIf="outputFormat==1">
+    <p>{{book | json}}</p>
+  </div>
+</div>

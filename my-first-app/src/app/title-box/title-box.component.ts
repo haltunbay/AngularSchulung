@@ -5,19 +5,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './title-box.component.html',
   styleUrls: ['./title-box.component.css']
 })
-
-
 export class TitleBoxComponent implements OnInit {
   @Input() title: string;
   @Output() titleClick = new EventEmitter<string>();
-  constructor() { }
+  constructor() {}
 
-    ngOnInit() {
-    }
+  ngOnInit() {}
 
-
-    sendPing()
-    {
-      this.titleClick.emit('Eventdata');
-    }
+  sendPing() {
+    this.titleClick.emit('Eventdata');
+  }
 }

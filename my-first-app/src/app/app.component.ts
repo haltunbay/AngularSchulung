@@ -12,8 +12,7 @@ export class AppComponent {
     console.log(name);
   }
 
-  displayEmit(emitMsg)
-  {
-    console.log('Emittted:'+ emitMsg);
+  displayEmit(emitMsg) {
+    console.log('Emittted:' + emitMsg);
   }
 }
