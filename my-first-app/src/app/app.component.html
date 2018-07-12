@@ -1,10 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div>
   <h1>
     Welcome to {{ title }}!
   </h1>
   Info Box
   <app-info-box></app-info-box>
+
+  <app-title-box (titleClick)="displayEmit($event)" [title]="titleVar"></app-title-box>
 </div>
 
 

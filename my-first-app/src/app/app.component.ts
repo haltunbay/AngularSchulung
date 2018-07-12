@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-
+  titleVar = 'Static title';
   log(name) {
     console.log(name);
+  }
+
+  displayEmit(emitMsg)
+  {
+    console.log('Emittted:'+ emitMsg);
   }
 }
