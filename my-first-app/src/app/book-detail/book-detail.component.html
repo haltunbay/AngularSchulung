@@ -1,0 +1,27 @@
+<h3> {{ book.title }} </h3>
+<table width=600px>
+  <tr>
+    <td>Subtitle</td>
+    <td>{{ book.subtitle }}</td>
+  </tr>
+  <tr>
+    <td>Abstract</td>
+    <td>{{ book.abstract }}</td>
+  </tr>
+  <tr>
+    <td>Author</td>
+    <td>{{ book.author }}</td>
+  </tr>
+  <tr>
+    <td>Publisher</td>
+    <td> {{book.publisher.name}}, {{book.publisher.url}} </td>
+  </tr>
+  <tr>
+    <td>ISBN</td>
+    <td> {{book.isbn}} </td>
+  </tr>
+  <tr>
+    <td>Numpages</td>
+    <td> {{book.numPages}} </td>
+  </tr>
+</table>

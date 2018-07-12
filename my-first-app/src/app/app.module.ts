@@ -10,6 +10,8 @@ import { TitleBoxComponent } from './title-box/title-box.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { BookDataService } from './shared/book-data.service';
 import { Routes } from '@angular/router';
+import { NavigationComponent } from './navigation/navigation.component';
+import { BookDetailComponent } from './book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { Routes } from '@angular/router';
     InfoBoxComponent,
     MouseCursorComponent,
     TitleBoxComponent,
-    BookListComponent
+    BookListComponent,
+    NavigationComponent,
+    BookDetailComponent
   ],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule],
   providers: [],

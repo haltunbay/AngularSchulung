@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Monkey Books Store';
   titleVar = 'Static title';
+
+  constructor(private location: Location) {}
+
   log(name) {
     console.log(name);
   }
 
   displayEmit(emitMsg) {
     console.log('Emittted:' + emitMsg);
+  }
+
+  goBack() {
+    // window.history.back();
+    this.location.back();
   }
 }
