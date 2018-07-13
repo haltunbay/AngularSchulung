@@ -7,7 +7,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Monkey Books Store';
+  title = 'Monkey Books';
   titleVar = 'Static title';
 
   constructor(private location: Location) {}
@@ -21,7 +21,6 @@ export class AppComponent {
   }
 
   goBack() {
-    // window.history.back();
     this.location.back();
   }
 }

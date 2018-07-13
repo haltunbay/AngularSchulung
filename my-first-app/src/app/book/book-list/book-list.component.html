@@ -1,0 +1,15 @@
+<h3>Books</h3>
+
+<div *ngFor="let book of books">
+  <div>
+    <!-- <a [href]="book.publisher.url">{{book.title}}</a> -->
+    <!-- <a [routerLink]="['/books', book.isbn]">{{ book.title + ' ' + book.isbn }}</a> -->
+    <a [routerLink]="[book.isbn]">{{ book.title + ' ' + book.isbn }} !!</a>
+  </div>
+</div>
+<button (click)="showJson()">View Json</button>
+<div *ngIf="outputFormat==1">
+  <div *ngFor="let book of books">
+    <p>{{book | json}}</p>
+  </div>
+</div>

@@ -1,43 +1,15 @@
-import { BookDetailComponent } from './book-detail/book-detail.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { InfoBoxComponent } from './info-box/info-box.component';
-import { MouseCursorComponent } from './mouse-cursor/mouse-cursor.component';
-import { TitleBoxComponent } from './title-box/title-box.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookListComponent } from './book-list/book-list.component';
 
 export const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: '/books' },
+  { path: 'books', loadChildren: './book/book.module#BookModule' },
   {
-    path: 'books',
-    component: BookListComponent
-  },
-  {
-    path: 'books/:isbn',
-    component: BookDetailComponent
-  },
-  {
-    path: 'titlebox',
-    component: TitleBoxComponent
-  },
-  {
-    path: 'mouse',
-    component: MouseCursorComponent
-  },
-  {
-    path: 'info',
-    component: InfoBoxComponent
-  },
-  {
-    path: 'home',
-    component: NavigationComponent
-  },
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: '/home'
+    path: 'sandbox',
+    loadChildren: './sandbox/sandbox.module#SandboxModule'
   }
 ];
+
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes, { enableTracing: true })],

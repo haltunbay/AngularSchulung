@@ -1,0 +1,9 @@
+<form>
+  <input [(ngModel)]="book.title" type="text" required name="title">
+  <input [(ngModel)]="book.subtitle" type="text" name="subtitle">
+  <input [(ngModel)]="book.abstract" type="text" name="abstract">
+  <input [(ngModel)]="book.author" type="text" required name="author">
+  <input [(ngModel)]="book.isbn" type="text" required name="isbn">
+  <input [(ngModel)]="book.publisher.name" type="text" required name="publisher.name">
+  <input [(ngModel)]="book.publisher.url" type="text" name="publisher.url">
+</form>

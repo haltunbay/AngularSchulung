@@ -1,6 +1,6 @@
-import { Book } from './../shared/book';
+import { BookDataService } from './../../shared/book-data.service';
+import { Book } from './../../shared/book';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BookDataService } from '../shared/book-data.service';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
@@ -19,7 +19,7 @@ export class BookListComponent implements OnInit, OnDestroy {
       .subscribe(books => (this.books = books));
   }
 
-  toggleFormat() {
+  showJson() {
     this.outputFormat =
       this.outputFormat === bookFormat.HTML ? bookFormat.JSN : bookFormat.HTML;
   }

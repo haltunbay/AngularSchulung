@@ -1,11 +1,13 @@
-import { BookListComponent } from './../book-list/book-list.component';
+import { ProvideModule } from './../book/provide/provide.module';
+import { BookComponent } from './../book/book/book.component';
+import { BookListComponent } from './../book/book-list/book-list.component';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, observable, from as observableFrom } from 'rxjs';
 import { Book } from './book';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: ProvideModule
 })
 export class BookDataService {
   baseUrl = 'http://localhost:4730/books';
@@ -56,7 +58,6 @@ export class BookDataService {
     }
   ];
   constructor(private http: HttpClient) {}
-  // constructor() {}
 
   getBooksStatic() {
     return this.books;
