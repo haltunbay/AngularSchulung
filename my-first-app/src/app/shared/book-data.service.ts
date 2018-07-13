@@ -74,4 +74,12 @@ export class BookDataService {
   getBookByIsbn(isbn: string) {
     return this.http.get<Book>(this.baseUrl + '/' + isbn);
   }
+
+  saveBook(book: Book) {
+    return this.http.put<Book>(this.baseUrl + '/' + book.isbn, book);
+  }
+
+  createBook(book: Book) {
+    return this.http.post<Book>(this.baseUrl, book);
+  }
 }

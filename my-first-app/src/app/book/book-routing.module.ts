@@ -1,3 +1,5 @@
+import { BookCreateComponent } from './book-create/book-create.component';
+import { BookEditComponent } from './book-edit/book-edit.component';
 import { ConfirmCanactivateGuard } from './shared/confirm-canactivate.guard';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -16,10 +18,18 @@ const routes: Routes = [
         path: ''
       },
       {
+        component: BookCreateComponent,
+        path: 'new'
+      },
+      {
         component: BookDetailComponent,
-        path: ':isbn',
-        canDeactivate: [ConfirmCandeactivateGuard],
-        canActivate: [ConfirmCanactivateGuard]
+        path: ':isbn'
+        // canDeactivate: [ConfirmCandeactivateGuard],
+        // canActivate: [ConfirmCanactivateGuard]
+      },
+      {
+        component: BookEditComponent,
+        path: ':isbn/edit'
       }
     ]
   }

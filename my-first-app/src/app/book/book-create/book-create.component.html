@@ -1,7 +1,6 @@
-<form #form="ngForm" (ngSubmit)="saveBook(form.value)">
-
+<form #form="ngForm" (ngSubmit)="createBook(form.value)">
   <label for="isbn">isbn</label>
-  <input readonly type="text" class="form-control" id="isbn" required [(ngModel)]="book.isbn" name="isbn" #isbn="ngModel">
+  <input type="text" class="form-control" id="isbn" required [(ngModel)]="book.isbn" name="isbn" #isbn="ngModel">
   <div [hidden]="isbn.valid || isbn.pristine" class="alert alert-danger">
     isbn is required
   </div>
@@ -44,6 +43,4 @@
     publisher.name is required
   </div>
   <button type="submit" class="btn btn-default" [disabled]="!form.valid">Save</button>
-
-
 </form>

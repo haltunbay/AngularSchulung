@@ -1,11 +1,1 @@
 /* You can add global styles to this file, and also import other style files */
-.panel-heading {
-  color: #fff !important;
-  background-color: #f4511e !important;
-  padding: 25px;
-  border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}

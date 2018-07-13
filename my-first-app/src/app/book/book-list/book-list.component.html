@@ -7,9 +7,12 @@
     <a [routerLink]="[book.isbn]">{{ book.title + ' ' + book.isbn }} !!</a>
   </div>
 </div>
-<button (click)="showJson()">View Json</button>
-<div *ngIf="outputFormat==1">
-  <div *ngFor="let book of books">
+<a (click)="showJson()" class="btn btn-default">
+  <span class="glyphicon glyphicon-list-alt "></span> Show Json</a>
+<a routerLink="new" class="btn btn-default">
+  <span class="glyphicon glyphicon-plus"></span> New Book</a>
+<div *ngIf="outputFormat==1 ">
+  <div *ngFor="let book of books ">
     <p>{{book | json}}</p>
   </div>
 </div>
