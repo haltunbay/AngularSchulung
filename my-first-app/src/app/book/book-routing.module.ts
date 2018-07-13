@@ -1,3 +1,4 @@
+import { BookNewComponent } from './book-new/book-new.component';
 import { BookCreateComponent } from './book-create/book-create.component';
 import { BookEditComponent } from './book-edit/book-edit.component';
 import { ConfirmCanactivateGuard } from './shared/confirm-canactivate.guard';
@@ -18,7 +19,7 @@ const routes: Routes = [
         path: ''
       },
       {
-        component: BookCreateComponent,
+        component: BookNewComponent,
         path: 'new'
       },
       {
